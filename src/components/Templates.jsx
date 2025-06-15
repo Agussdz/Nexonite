@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Gunakan ini jika Anda menggunakan React Router
+import { Link } from "react-router-dom";
 
 function Templates({
   showHeader = true,
@@ -13,8 +13,8 @@ function Templates({
       category: "Company Profile",
       date: "1 - 28 July 2022",
       price: "Free",
-      bgColor: "from-orange-100 to-yellow-100",
-      iconColor: "bg-orange-200",
+      imageUrl:
+        "https://img.freepik.com/premium-psd/marketing-website-landing-page_153148-44.jpg",
       description: "Furniture Website",
     },
     {
@@ -23,8 +23,8 @@ function Templates({
       category: "Travel",
       date: "1 - 28 July 2022",
       price: "Free",
-      bgColor: "from-blue-100 to-cyan-100",
-      iconColor: "bg-blue-200",
+      imageUrl:
+        "https://nuansagiskonsultan.com/wp-content/uploads/2021/04/jasa-website-company-profile.png",
       description: "Travel Website",
     },
     {
@@ -33,8 +33,8 @@ function Templates({
       category: "Katalog Produk",
       date: "1 - 28 July 2022",
       price: "Free",
-      bgColor: "from-pink-100 to-purple-100",
-      iconColor: "bg-pink-200",
+      imageUrl:
+        "https://i.pinimg.com/736x/56/24/22/56242222edd0e1e89c66345b23a91897.jpg",
       description: "Fashion Store",
     },
     {
@@ -43,8 +43,8 @@ function Templates({
       category: "Pendidikan",
       date: "1 - 28 July 2022",
       price: "Free",
-      bgColor: "from-indigo-100 to-blue-100",
-      iconColor: "bg-indigo-200",
+      imageUrl:
+        "https://cdn.dribbble.com/userupload/5293090/file/original-66575230f03691ae73622929c3274876.png?format=webp&resize=400x300&vertical=center",
       description: "E-Learning",
     },
     {
@@ -53,8 +53,8 @@ function Templates({
       category: "Usaha Makanan",
       date: "1 - 28 July 2022",
       price: "Free",
-      bgColor: "from-green-100 to-emerald-100",
-      iconColor: "bg-green-200",
+      imageUrl:
+        "https://img.freepik.com/premium-psd/design-company-website-page_153148-49.jpg",
       description: "Food Business",
     },
     {
@@ -63,8 +63,8 @@ function Templates({
       category: "Usaha Makanan",
       date: "1 - 28 July 2022",
       price: "Free",
-      bgColor: "from-red-100 to-orange-100",
-      iconColor: "bg-red-200",
+      imageUrl:
+        "https://img.freepik.com/premium-psd/business-consultancy-website-ui_217752-53.jpg",
       description: "Restaurant",
     },
   ];
@@ -79,7 +79,6 @@ function Templates({
       }`}
     >
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
         {showHeader && (
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-0">
@@ -98,7 +97,6 @@ function Templates({
           </div>
         )}
 
-        {/* Filter Tabs */}
         {showFilters && (
           <div className="flex flex-wrap gap-3 mb-12">
             {[
@@ -123,26 +121,18 @@ function Templates({
           </div>
         )}
 
-        {/* Template Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayTemplates.map((template) => (
             <div
               key={template.id}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
-              <div
-                className={`aspect-video bg-gradient-to-br ${template.bgColor} p-4`}
-              >
-                <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center">
-                  <div className="text-center">
-                    <div
-                      className={`w-16 h-16 ${template.iconColor} rounded-lg mx-auto mb-2`}
-                    />
-                    <div className="text-xs text-gray-600">
-                      {template.description}
-                    </div>
-                  </div>
-                </div>
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src={template.imageUrl}
+                  alt={template.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
@@ -151,9 +141,12 @@ function Templates({
                     {template.price}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {template.title}
                 </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  {template.description}
+                </p>
                 <button className="w-full py-3 border border-pink-500 text-pink-500 rounded-lg hover:bg-pink-50 transition-colors">
                   Preview Template
                 </button>

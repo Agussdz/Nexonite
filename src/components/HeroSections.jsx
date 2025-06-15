@@ -4,7 +4,7 @@ import hero3d from "../assets/hero-3d.png";
 export default function HeroSections({ variant = "home" }) {
   if (variant === "templates") {
     return (
-      <section className="px-4 lg:px-6 py-12 lg:py-20 bg-gradient-to-r from-pink-500 to-purple-600">
+      <section className="px-4 lg:px-6 py-12 lg:py-20 bg-gradient-to-r from-pink-500 to-indigo-600">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
@@ -40,8 +40,8 @@ export default function HeroSections({ variant = "home" }) {
                         <div className="h-2 bg-gray-300 rounded w-4/5"></div>
                       </div>
                     </div>
-                    <div className="bg-purple-100 rounded-lg p-2">
-                      <div className="w-full h-4 bg-purple-500 rounded mb-2"></div>
+                    <div className="bg-indigo-100 rounded-lg p-2">
+                      <div className="w-full h-4 bg-indigo-500 rounded mb-2"></div>
                       <div className="space-y-1">
                         <div className="h-2 bg-gray-300 rounded"></div>
                         <div className="h-2 bg-gray-300 rounded w-1/2"></div>
@@ -59,7 +59,7 @@ export default function HeroSections({ variant = "home" }) {
 
   if (variant === "portfolio") {
     return (
-      <section className="px-4 lg:px-6 py-12 lg:py-20 bg-gradient-to-r from-indigo-600 to-purple-600">
+      <section className="px-4 lg:px-6 py-12 lg:py-20 bg-gradient-to-r from-indigo-600 to-indigo-600">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
@@ -136,19 +136,19 @@ export default function HeroSections({ variant = "home" }) {
   return (
     <section className="px-4 lg:px-6 py-12 ">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center ">
           <div className="space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-full text-sm font-medium">
+            <div className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-full text-sm font-medium">
               ✨ Solusi Digital Untuk Bisnis Masa Depan
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
               Bangun Aplikasi Website Yang{" "}
-              <span className="text-purple-600">Cepat</span>,{" "}
-              <span className="text-purple-600">Modern</span>, Dan Siap{" "}
-              <span className="text-purple-600">Mengembangkan</span> Bisnis
+              <span className="text-indigo-600">Cepat</span>,{" "}
+              <span className="text-indigo-600">Modern</span>, Dan Siap{" "}
+              <span className="text-indigo-600">Mengembangkan</span> Bisnis
               Anda.
             </h1>
 
@@ -160,7 +160,7 @@ export default function HeroSections({ variant = "home" }) {
 
             {/* CTA Button with Social Proof */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg">
+              <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-indigo-600 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-indigo-700 transition-all transform hover:scale-105 shadow-lg">
                 Hubungi Kami
               </button>
 
@@ -193,12 +193,12 @@ export default function HeroSections({ variant = "home" }) {
           </div>
 
           {/* Hero Illustration */}
-          <div className="relative">
-            <div className="relative z-10">
+          <div className="flex justify-end items-center">
+            <div className="">
               <img
                 src={hero3d}
                 alt="Website building illustration"
-                className="w-full h-auto"
+                className="w-[90%] h-auto"
               />
             </div>
             {/* Background decoration */}

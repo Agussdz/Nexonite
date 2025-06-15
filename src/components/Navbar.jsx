@@ -21,7 +21,7 @@ export default function Navbar() {
             to="/"
             className={`transition-colors ${
               isActive("/")
-                ? "text-purple-600 font-semibold"
+                ? "text-indigo-600 font-semibold"
                 : "text-gray-700 hover:text-gray-900"
             }`}
           >
@@ -31,7 +31,7 @@ export default function Navbar() {
             to="/templates"
             className={`transition-colors ${
               isActive("/templates")
-                ? "text-purple-600 font-semibold"
+                ? "text-indigo-600 font-semibold"
                 : "text-gray-700 hover:text-gray-900"
             }`}
           >
@@ -41,28 +41,26 @@ export default function Navbar() {
             to="/portfolio"
             className={`transition-colors ${
               isActive("/portfolio")
-                ? "text-purple-600 font-semibold"
+                ? "text-indigo-600 font-semibold"
                 : "text-gray-700 hover:text-gray-900"
             }`}
           >
             Portfolio
           </Link>
-          <a
-            href="#"
-            className="text-gray-700 hover:text-gray-900 transition-colors"
+          <Link
+            to="/about-us"
+            className={`transition-colors ${
+              isActive("/about-us")
+                ? "text-indigo-600 font-semibold"
+                : "text-gray-700 hover:text-gray-900"
+            }`}
           >
-            Article
-          </a>
-          <a
-            href="#"
-            className="text-gray-700 hover:text-gray-900 transition-colors"
-          >
-            Contact Us
-          </a>
+            About Us
+          </Link>
         </nav>
 
         <div className="flex items-center space-x-4">
-          <button className="hidden md:block px-6 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors">
+          <button className="hidden md:block px-6 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">
             Contact Us
           </button>
 
@@ -84,7 +82,7 @@ export default function Navbar() {
               to="/"
               className={`transition-colors ${
                 isActive("/")
-                  ? "text-purple-600 font-semibold"
+                  ? "text-indigo-600 font-semibold"
                   : "text-gray-700 hover:text-gray-900"
               }`}
             >
@@ -94,7 +92,7 @@ export default function Navbar() {
               to="/templates"
               className={`transition-colors ${
                 isActive("/templates")
-                  ? "text-purple-600 font-semibold"
+                  ? "text-indigo-600 font-semibold"
                   : "text-gray-700 hover:text-gray-900"
               }`}
             >
@@ -104,25 +102,24 @@ export default function Navbar() {
               to="/portfolio"
               className={`transition-colors ${
                 isActive("/portfolio")
-                  ? "text-purple-600 font-semibold"
+                  ? "text-indigo-600 font-semibold"
                   : "text-gray-700 hover:text-gray-900"
               }`}
             >
               Portfolio
             </Link>
-            <a
-              href="#"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
+            <Link
+              to="/about-us"
+              className={`transition-colors ${
+                isActive("/about-us")
+                  ? "text-indigo-600 font-semibold"
+                  : "text-gray-700 hover:text-gray-900"
+              }`}
             >
-              Article
-            </a>
-            <a
-              href="#"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
-            >
-              Contact Us
-            </a>
-            <button className="px-6 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors w-fit">
+              About Us
+            </Link>
+
+            <button className="px-6 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors w-fit">
               Contact Us
             </button>
           </nav>

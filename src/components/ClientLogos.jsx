@@ -4,9 +4,11 @@ export default function ClientLogos() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            Lebih Dari 50+ Klien
+            Lebih Dari 50+ Klien{" "}
+            <span className=" text-2xl text-purple-600 font-bold">
+              Merasa Puas
+            </span>
           </h2>
-          <p className="text-xl text-purple-600 font-semibold">Merasa Puas</p>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 opacity-60">

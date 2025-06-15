@@ -11,55 +11,55 @@ export default function Portofolio({
       title: "SmartPos",
       description:
         "Sistem kasir digital yang membantu bisnis mengelola transaksi, stok barang, dan laporan keuangan dengan mudah.",
-      image: "https://via.placeholder.com/600x400?text=SmartPOS+Dashboard",
-      bgColor: "from-blue-50 to-indigo-100",
+      image:
+        "https://turboly.com/blog/image/2018-03-05-4-Manfaat-POS-Berbasis-Web.jpg",
     },
     {
       id: 2,
       title: "MediCare",
       description:
         "Aplikasi rumah sakit untuk manajemen pasien, rekam medis elektronik, jadwal dokter, dan pemantauan kesehatan real-time.",
-      image: "https://via.placeholder.com/600x400?text=MediCare+System",
-      bgColor: "from-cyan-50 to-blue-100",
+      image:
+        "https://149842030.v2.pressablecdn.com/wp-content/uploads/2020/08/medicalcenter-free-website-template.jpg",
     },
     {
       id: 3,
       title: "BookingEase",
       description:
         "Sistem reservasi online untuk hotel, restoran, dan layanan lainnya dengan fitur jadwal otomatis serta notifikasi pemesanan.",
-      image: "https://via.placeholder.com/600x400?text=BookingEase+Platform",
-      bgColor: "from-yellow-50 to-orange-100",
+      image:
+        "https://cozzy.id/uploads/0000/630/2024/12/17/cozzyid-hotel-murah-hotel-terdekat-penginapan-murah-penginapan-terdekat-booking-hotel-web-booking-hotel-sumber-gambar-frommers.jpeg",
     },
     {
       id: 4,
       title: "EduLearn",
       description:
         "Platform pembelajaran online dengan fitur kelas virtual, manajemen tugas, dan analitik performa siswa untuk institusi pendidikan.",
-      image: "https://via.placeholder.com/600x400?text=EduLearn+Platform",
-      bgColor: "from-purple-50 to-indigo-100",
+      image:
+        "https://cdn.dribbble.com/userupload/38626229/file/original-0cd035ad3ec7d8fb103e12fd95bf8ac3.png?format=webp&resize=400x300&vertical=center",
     },
     {
       id: 5,
       title: "FoodMarket",
       description:
         "Aplikasi pemesanan makanan online dengan fitur pelacakan pengiriman real-time dan sistem pembayaran terintegrasi.",
-      image: "https://via.placeholder.com/600x400?text=FoodMarket+App",
-      bgColor: "from-green-50 to-emerald-100",
+      image:
+        "https://cdn.dribbble.com/userupload/19057524/file/original-2fe5ebf358562f299b66f93895ea4892.png?format=webp&resize=400x300&vertical=center",
     },
     {
       id: 6,
       title: "TravelGo",
       description:
         "Website pemesanan perjalanan dengan fitur pencarian destinasi, perbandingan harga, dan rekomendasi paket wisata personal.",
-      image: "https://via.placeholder.com/600x400?text=TravelGo+Website",
-      bgColor: "from-orange-50 to-red-100",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj7Tov375ZRYgBr26ObImhRr7GaGX5rXmd2g&s",
     },
   ];
 
   const displayProjects = variant === "home" ? projects.slice(0, 3) : projects;
 
   return (
-    <section className={`px-4 lg:px-6 py-16 lg:py-24`}>
+    <section className="px-4 lg:px-6 py-16 lg:py-24">
       <div className="max-w-7xl mx-auto">
         {showFilters && variant === "full" && (
           <div className="flex flex-wrap gap-3 mb-12">
@@ -114,76 +114,13 @@ export default function Portofolio({
               key={project.id}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
-              {variant === "home" ? (
-                <div
-                  className={`aspect-video bg-gradient-to-br ${project.bgColor} p-6 flex items-center justify-center`}
-                >
-                  {project.id === 1 && (
-                    <div className="w-full h-full bg-white rounded-lg shadow-sm p-4">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex space-x-2">
-                          <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                          <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                        </div>
-                      </div>
-                      <div className="grid grid-cols-3 gap-2 mb-3">
-                        <div className="h-8 bg-blue-500 rounded"></div>
-                        <div className="h-8 bg-green-500 rounded"></div>
-                        <div className="h-8 bg-orange-500 rounded"></div>
-                      </div>
-                      <div className="space-y-2">
-                        <div className="h-2 bg-gray-200 rounded w-3/4"></div>
-                        <div className="h-2 bg-gray-200 rounded w-1/2"></div>
-                      </div>
-                    </div>
-                  )}
-                  {project.id === 2 && (
-                    <div className="w-full h-full bg-white rounded-lg shadow-sm p-4">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex space-x-2">
-                          <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                          <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between items-center">
-                          <div className="h-3 bg-gray-300 rounded w-1/4"></div>
-                          <div className="h-6 bg-blue-500 rounded px-2"></div>
-                        </div>
-                        <div className="h-2 bg-gray-200 rounded"></div>
-                        <div className="h-2 bg-gray-200 rounded w-4/5"></div>
-                        <div className="h-2 bg-gray-200 rounded w-3/5"></div>
-                      </div>
-                    </div>
-                  )}
-                  {project.id === 3 && (
-                    <div className="w-full h-full bg-gradient-to-br from-orange-200 to-yellow-200 rounded-lg relative overflow-hidden">
-                      <div className="absolute inset-0 p-4">
-                        <div className="grid grid-cols-4 gap-2 h-full">
-                          <div className="bg-yellow-400 rounded shadow-sm"></div>
-                          <div className="bg-yellow-300 rounded shadow-sm"></div>
-                          <div className="bg-orange-400 rounded shadow-sm"></div>
-                          <div className="bg-yellow-500 rounded shadow-sm"></div>
-                          <div className="bg-orange-300 rounded shadow-sm"></div>
-                          <div className="bg-yellow-400 rounded shadow-sm"></div>
-                          <div className="bg-orange-500 rounded shadow-sm"></div>
-                          <div className="bg-yellow-300 rounded shadow-sm"></div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <div className="aspect-video bg-white p-4 border-b">
-                  <img
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                </div>
-              )}
+              <div className="aspect-video bg-white p-4 border-b">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">
                   {project.title}

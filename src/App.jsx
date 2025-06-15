@@ -4,6 +4,7 @@ import Homepage from "./pages/HomePage";
 import Templates from "./components/Templates";
 import Portofolio from "./components/Portofolio";
 import Navbar from "./components/Navbar";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           path="/portfolio"
           element={<Portofolio variant="full" showFilters={true} />}
         />
+        <Route path="/about-us" element={<AboutPage />} />
       </Routes>
     </Router>
   );

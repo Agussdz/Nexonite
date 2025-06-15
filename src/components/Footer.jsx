@@ -113,7 +113,7 @@ export default function Footer() {
                 href="mailto:support@edtech.com"
                 className="block text-blue-500 hover:text-blue-700 transition-colors"
               >
-                support@edtech.com
+                support@nexonite.com
               </a>
               <a
                 href="tel:+6285923935983"
