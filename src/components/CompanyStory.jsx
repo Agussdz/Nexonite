@@ -11,13 +11,13 @@ export default function CompanyStory() {
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
               Perjalanan Membangun Ekosistem Digital Indonesia
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-sm text-gray-600 leading-relaxed">
               NexoNite lahir dari visi sederhana: membuat teknologi digital
               dapat diakses oleh semua bisnis di Indonesia. Dimulai pada tahun
               2022 oleh tim developer berpengalaman, kami melihat banyak UMKM
               dan perusahaan yang kesulitan beradaptasi dengan era digital.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-sm text-gray-600 leading-relaxed">
               Dengan semangat inovasi dan dedikasi tinggi, kami mengembangkan
               solusi website yang tidak hanya modern dan fungsional, tetapi juga
               mudah digunakan dan terjangkau. Setiap proyek yang kami kerjakan
@@ -40,24 +40,12 @@ export default function CompanyStory() {
 
           {/* Image */}
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8">
-              <div className="w-full h-full bg-white rounded-2xl shadow-lg p-6 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mx-auto flex items-center justify-center">
-                    <div className="text-white text-2xl font-bold">N</div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-3 bg-gray-200 rounded w-32 mx-auto"></div>
-                    <div className="h-3 bg-gray-200 rounded w-24 mx-auto"></div>
-                    <div className="h-3 bg-gray-200 rounded w-28 mx-auto"></div>
-                  </div>
-                  <div className="flex justify-center space-x-2">
-                    <div className="w-8 h-8 bg-blue-200 rounded-full"></div>
-                    <div className="w-8 h-8 bg-green-200 rounded-full"></div>
-                    <div className="w-8 h-8 bg-yellow-200 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
+            <div className="  rounded-3xl p-2">
+              <img
+                src="https://png.pngtree.com/png-clipart/20230821/original/pngtree-online-library-digital-education-background-with-distance-learning-picture-image_8154891.png"
+                alt="Foto Tim NexoNite"
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
           </div>
         </div>
