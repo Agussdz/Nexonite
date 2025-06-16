@@ -10,7 +10,7 @@ import Contact from "../components/Contact";
 
 export default function Homepage() {
   return (
-    <div>
+    <div className="pt-15">
       <HeroSections />
       <ClientLogos />
       <OurFeatures />

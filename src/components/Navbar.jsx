@@ -9,69 +9,73 @@ export default function Navbar() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="px-4 lg:px-6 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white px-4 lg:px-6 py-4 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
+        {/* Logo di kiri */}
         <Link to="/" className="text-2xl font-bold text-gray-900">
           NexoNite
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <Link
-            to="/"
-            className={`transition-colors ${
-              isActive("/")
-                ? "text-indigo-600 font-semibold"
-                : "text-gray-700 hover:text-gray-900"
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            to="/templates"
-            className={`transition-colors ${
-              isActive("/templates")
-                ? "text-indigo-600 font-semibold"
-                : "text-gray-700 hover:text-gray-900"
-            }`}
-          >
-            Templates
-          </Link>
-          <Link
-            to="/portfolio"
-            className={`transition-colors ${
-              isActive("/portfolio")
-                ? "text-indigo-600 font-semibold"
-                : "text-gray-700 hover:text-gray-900"
-            }`}
-          >
-            Portfolio
-          </Link>
-          <Link
-            to="/about-us"
-            className={`transition-colors ${
-              isActive("/about-us")
-                ? "text-indigo-600 font-semibold"
-                : "text-gray-700 hover:text-gray-900"
-            }`}
-          >
-            About Us
-          </Link>
-        </nav>
+        {/* Menu desktop di kanan */}
+        <div className="hidden md:flex items-center space-x-8">
+          <nav className="flex items-center space-x-8">
+            <Link
+              to="/"
+              className={`transition-colors ${
+                isActive("/")
+                  ? "text-indigo-600 font-semibold"
+                  : "text-gray-700 hover:text-gray-900"
+              }`}
+            >
+              Home
+            </Link>
+            <Link
+              to="/templates"
+              className={`transition-colors ${
+                isActive("/templates")
+                  ? "text-indigo-600 font-semibold"
+                  : "text-gray-700 hover:text-gray-900"
+              }`}
+            >
+              Templates
+            </Link>
+            <Link
+              to="/portfolio"
+              className={`transition-colors ${
+                isActive("/portfolio")
+                  ? "text-indigo-600 font-semibold"
+                  : "text-gray-700 hover:text-gray-900"
+              }`}
+            >
+              Portfolio
+            </Link>
+            <Link
+              to="/about-us"
+              className={`transition-colors ${
+                isActive("/about-us")
+                  ? "text-indigo-600 font-semibold"
+                  : "text-gray-700 hover:text-gray-900"
+              }`}
+            >
+              About Us
+            </Link>
+          </nav>
 
-        <div className="flex items-center space-x-4">
-          <button className="hidden md:block px-6 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">
+          <Link
+            to="/contact"
+            className="px-6 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors"
+          >
             Contact Us
-          </button>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          </Link>
         </div>
+
+        {/* Tombol hamburger (mobile) */}
+        <button
+          className="md:hidden p-2"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
 
       {/* Mobile Navigation */}
@@ -119,9 +123,12 @@ export default function Navbar() {
               About Us
             </Link>
 
-            <button className="px-6 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors w-fit">
+            <Link
+              to="/contact"
+              className="px-6 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors w-fit"
+            >
               Contact Us
-            </button>
+            </Link>
           </nav>
         </div>
       )}

@@ -59,8 +59,8 @@ export default function Portofolio({
   const displayProjects = variant === "home" ? projects.slice(0, 3) : projects;
 
   return (
-    <section className="px-4 lg:px-6 py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto">
+    <section className="px-4 lg:px-6 py-16 lg:py-24 ">
+      <div className="max-w-7xl mx-auto pt-10">
         {showFilters && variant === "full" && (
           <div className="flex flex-wrap gap-3 mb-12">
             {[
@@ -112,9 +112,9 @@ export default function Portofolio({
           {displayProjects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow "
             >
-              <div className="aspect-video bg-white p-4 border-b">
+              <div className="aspect-video bg-white p-4 ">
                 <img
                   src={project.image}
                   alt={project.title}
