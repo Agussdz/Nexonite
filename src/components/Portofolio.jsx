@@ -61,6 +61,28 @@ export default function Portofolio({
   return (
     <section className="px-4 lg:px-6 py-16 lg:py-24 ">
       <div className="max-w-7xl mx-auto pt-10">
+        {showHeader && (
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12">
+            <div>
+              {variant === "home" && (
+                <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm font-medium mb-4">
+                  Portofolio
+                </div>
+              )}
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+                Proyek Unggulan Kami
+              </h2>
+            </div>
+            {variant === "home" && (
+              <a
+                href="/portfolio"
+                className="px-6 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors mt-4 sm:mt-0 inline-block text-center"
+              >
+                Show All
+              </a>
+            )}
+          </div>
+        )}
         {showFilters && variant === "full" && (
           <div className="flex flex-wrap gap-3 mb-12">
             {[
@@ -82,29 +104,6 @@ export default function Portofolio({
                 {label}
               </button>
             ))}
-          </div>
-        )}
-
-        {showHeader && (
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12">
-            <div>
-              {variant === "home" && (
-                <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm font-medium mb-4">
-                  Portofolio
-                </div>
-              )}
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-                Proyek Unggulan Kami
-              </h2>
-            </div>
-            {variant === "home" && (
-              <a
-                href="/portfolio"
-                className="px-6 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors mt-4 sm:mt-0 inline-block text-center"
-              >
-                Show All
-              </a>
-            )}
           </div>
         )}
 
